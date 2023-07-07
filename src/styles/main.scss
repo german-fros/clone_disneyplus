@@ -1,3 +1,46 @@
+@use "variaveis" as *;
+@use "hero" as *;
+
+//BASE
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
-    background-color: red;
+    background-color: $corFundo;
+    font-family: Avenir, sans-serif
+}
+
+.text--big {
+    @include text(18px)
+}
+
+.text {
+    @include text
+}
+
+.text--small {
+    @include text(12px)
+}
+
+.title--big {
+    @include title(44px)
+}
+
+.title {
+    @include title
+}
+
+.title--small {
+    @include title(28px)
+}
+
+.link--text {
+    @include text(18px);
+    color: $corTextoSecundario;
+    text-decoration: underline;
 }
